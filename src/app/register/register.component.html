@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="header">
+      <img src="assets/cnam-logo.png" alt="CNAM Logo" class="cnam-logo">
+      <div class="title">Welcome to TacNam</div>
+      <img src="assets/tagamuta-valley-logo.png" alt="Tagamuta Valley Logo" class="tagamuta-logo">
+    </div>
+    <div class="description">
+      <p>TacNam is a service developed by Tagmuta Valley to facilitate APCI Applications and management</p>
+    </div>
+    <div class="form-container">
+      <div class="sign-up-header">SIGN UP</div>
+      <form (ngSubmit)="register()">
+        <input type="text" [(ngModel)]="name" name="name" placeholder="name" required>
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Adresse mail" required>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="mot de passe" required>
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="confirmer votre mot de passe" required>
+        <select [(ngModel)]="role" name="role" required>
+          <option value="" disabled selected>Role</option>
+          <option value="PATIENT">PATIENT</option>
+          <option value="CNAM_OFFICER">CNAM_OFFICER</option>
+          <option value="DOCTOR">DOCTOR</option>
+        </select>
+        <button type="submit" class="register-btn">register</button>
+        <p>you have an account already?</p>
+        <button type="submit" (click)="navigateToLogin()" class="register-btn">login</button>
+
+      </form>
+    </div>
+  </div>
+  

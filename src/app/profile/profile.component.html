@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="header">
+      <img src="assets/cnam-logo.png" alt="CNAM Logo" class="cnam-logo">
+      <div class="title">Welcome to TacNam</div>
+      <img src="assets/tagamuta-valley-logo.png" alt="Tagamuta Valley Logo" class="tagamuta-logo">
+    </div>
+    <div class="description">
+      <p>TacNam is a service developed by Tagamuta Valley to facilitate APCI Applications and management</p>
+    </div>
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="user-info">
+          <h2>{{ userName }}</h2>
+          <p>{{ userRole }}</p>
+        </div>
+      </div>
+      <div >
+        <button (click)="changePassword()" class="profile-actions">Change Password</button>
+        <button (click)="changeName()" class="profile-actions" >Change Name</button>
+        <button type="button"class="register-btn" (click)="applyForApci()" (click)="applyForApci()">Apply for APCI</button>
+        <button type="button"class="register-btn" (click)="checkApciStatus()">Check APCI Status</button>
+      </div>
+    </div>
+  </div>
+  

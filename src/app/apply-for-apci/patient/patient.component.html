@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="header">
+      <img src="src\assets\cnam-logo.png" alt="CNAM Logo" class="cnam-logo">
+      <div class="title">Welcome to TacNam</div>
+      <img src="src\assets\tagamuta-valley-logo.png" alt="Tagamuta Valley Logo" class="tagamuta-logo">
+    </div>
+  
+    <div class="form-container">
+      <div class="form">
+        <div class="insurance-type">
+          <label><input type="checkbox" [(ngModel)]="cnss"> CNSS</label>
+          <label><input type="checkbox" [(ngModel)]="cnrps"> CNRPS</label>
+          <label><input type="checkbox" [(ngModel)]="conventionBilaterale"> Convention Bilatérale</label>
+        </div>
+  
+        <div class="field">
+          <label for="uniqueIdentifier">Identifiant unique ou Numéro d’assuré social</label>
+          <input id="uniqueIdentifier" type="text" [(ngModel)]="uniqueIdentifier">
+        </div>
+  
+        <div class="section">
+          <h2>L'ASSURE SOCIAL</h2>
+          <div class="field-group">
+            <div class="field">
+              <label for="prenom">PRENOM</label>
+              <input id="prenom" type="text" [(ngModel)]="insured.prenom">
+            </div>
+            <div class="field">
+              <label for="nom">NOM</label>
+              <input id="nom" type="text" [(ngModel)]="insured.nom">
+            </div>
+            <div class="field">
+              <label for="adresse">ADRESSE</label>
+              <input id="adresse" type="text" [(ngModel)]="insured.adresse">
+            </div>
+            <div class="field">
+              <label for="nCin">N CIN</label>
+              <input id="nCin" type="text" [(ngModel)]="insured.nCin">
+            </div>
+            <div class="field">
+              <label for="telephone">TELEPHONE</label>
+              <input id="telephone" type="text" [(ngModel)]="insured.telephone">
+            </div>
+          </div>
+        </div>
+  
+        <div class="section">
+          <h2>LE BENEFICIAIRE</h2>
+          <div class="field-group">
+            <label><input type="radio" name="beneficiary" value="assureSocial" [(ngModel)]="beneficiary.type"> L'ASSURE SOCIAL</label>
+            <label><input type="radio" name="beneficiary" value="conjoint" [(ngModel)]="beneficiary.type"> LE CONJOINT</label>
+            <label><input type="radio" name="beneficiary" value="enfant" [(ngModel)]="beneficiary.type"> L'ENFANT</label>
+            <label><input type="radio" name="beneficiary" value="ascendant" [(ngModel)]="beneficiary.type"> L'ASCENDANT</label>
+          </div>
+          <div class="field-group">
+            <div class="field">
+              <label for="beneficiaryPrenom">PRENOM</label>
+              <input id="beneficiaryPrenom" type="text" [(ngModel)]="beneficiary.prenom">
+            </div>
+            <div class="field">
+              <label for="beneficiaryNom">NOM</label>
+              <input id="beneficiaryNom" type="text" [(ngModel)]="beneficiary.nom">
+            </div>
+            <div class="field">
+              <label for="beneficiaryDateNaissance">DATE DE NAISSANCE</label>
+              <input id="beneficiaryDateNaissance" type="date" [(ngModel)]="beneficiary.dateNaissance">
+            </div>
+          </div>
+        </div>
+  
+        <button (click)="submitApplication()">DEMANDE D'ADMISSION EN APCI</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,130 @@
+:root {
+    font-size: 16px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #87CEFA;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 1rem; /* 1rem = 16px, adjust based on root font size */
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.25rem; /* 1.25rem = 20px */
+  }
+  
+  .cnam-logo, .tagamuta-logo {
+    height: 3.125rem; /* 3.125rem = 50px */
+  }
+  
+  .title {
+    font-size: 1.5rem; /* 1.5rem = 24px */
+    font-weight: bold;
+    margin-top: 0.625rem; /* 0.625rem = 10px */
+  }
+  
+  .form-container {
+    background-color: #D3D3D3;
+    padding: 1.875rem;
+    border-radius: 0.625rem;
+    margin-top: 1.875rem;
+    width: 25rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .field-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .field {
+    flex: 1;
+    min-width: 12.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .field label {
+    display: block;
+    margin-bottom: 0.3125rem;
+  }
+  
+  .field input {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .section {
+    margin-bottom: 1.25rem;
+  }
+  
+  .section h2 {
+    margin-bottom: 1.25rem;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 48rem) {
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .form-container {
+      width: 90%;
+      padding: 1.25rem;
+    }
+  
+    .section h2 {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 30rem) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo {
+      height: 2.5rem;
+    }
+  
+    .title {
+      font-size: 1.125rem;
+    }
+  
+    .section h2 {
+      font-size: 1.125rem;
+    }
+  }
+  
