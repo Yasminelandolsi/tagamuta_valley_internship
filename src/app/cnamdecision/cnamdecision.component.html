@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="header">
+      <img src="assets/cnam-logo.png" alt="CNAM Logo" class="cnam-logo">
+      <h1 class="title">Bienvenue à TacNam</h1>
+      <img src="assets/tagamuta-valley-logo.png" alt="Tagamuta Logo" class="tagamuta-logo">
+    </div>
+  
+    <div class="form-container">
+      <form (ngSubmit)="onSubmit()" class="form">
+        <div class="field-group">
+          <label for="cnamDecision">Décision CNAM</label>
+          <select id="cnamDecision" [(ngModel)]="cnamDecision" name="cnamDecision" required>
+            <option value="accepter">Accepter</option>
+            <option value="refuser">Refuser</option>
+          </select>
+        </div>
+  
+        <div class="field-group">
+          <label for="apciCode">Code APCI</label>
+          <input type="text" id="apciCode" [(ngModel)]="apciCode" name="apciCode" required>
+        </div>
+  
+        <div class="field-group">
+          <label for="coverageDuration">Durée de couverture</label>
+          <input type="text" id="coverageDuration" [(ngModel)]="coverageDuration" name="coverageDuration" required>
+        </div>
+  
+        <div class="field-group">
+          <label for="refusalMotive">Motif de refus</label>
+          <input type="text" id="refusalMotive" [(ngModel)]="refusalMotive" name="refusalMotive" required>
+        </div>
+  
+        <div class="field-group">
+          <label for="observations">Observations</label>
+          <input type="text" id="observations" [(ngModel)]="observations" name="observations" required>
+        </div>
+  
+        <div class="field-group">
+          <label for="coverageStartDate">Date de début de couverture</label>
+          <input type="date" id="coverageStartDate" [(ngModel)]="coverageStartDate" name="coverageStartDate" required>
+        </div>
+  
+        <div class="field-group">
+          <label for="signOffDate">Date de signature</label>
+          <input type="date" id="signOffDate" [(ngModel)]="signOffDate" name="signOffDate" required>
+        </div>
+  
+        <button type="submit" class="header-button">Soumettre</button>
+      </form>
+    </div>
+  </div>
+  

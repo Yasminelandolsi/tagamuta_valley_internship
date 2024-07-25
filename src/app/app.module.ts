@@ -7,27 +7,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { ProfileComponent } from './profile/profile.component';
 import { PatientComponent } from './apply-for-apci/patient/patient.component';
 import { DoctorComponent } from './apply-for-apci/doctor/doctor.component';
-import { CnamOfficerComponent } from './apply-for-apci/cnam-officer/cnam-officer.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { CnamDecisionComponent } from './cnamdecision/cnamdecision.component';
+import { CnamOfficerComponent } from './profile/cnam-officer/cnam-officer.component';
+import { CnamComponent } from './voirapci/cnam/cnam.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent,
     PatientComponent,
     DoctorComponent,
-    CnamOfficerComponent
+    CnamDecisionComponent,
+    CnamOfficerComponent,
+    CnamComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

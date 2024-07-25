@@ -1,5 +1,5 @@
-/* Existing styles */
-::root {
+/* Root font-size for rem calculations */
+:root {
     font-size: 16px;
   }
   
@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 0 1rem; /* 1rem = 16px, adjust based on root font size */
+    padding: 0 1rem; /* 1rem = 16px */
     box-sizing: border-box;
   }
   
@@ -80,18 +80,11 @@
     margin-bottom: 0.3125rem;
   }
   
-  .field input {
+  .field input,
+  .field select {
     width: 100%;
     padding: 0.5rem;
     box-sizing: border-box;
-  }
-  
-  .section {
-    margin-bottom: 1.25rem;
-  }
-  
-  .section h2 {
-    margin-bottom: 1.25rem;
   }
   
   button[type="submit"] {

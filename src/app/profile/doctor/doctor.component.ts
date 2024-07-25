@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: 'app-doctor',
+  templateUrl: './doctor.component.html',
+  styleUrls: ['./doctor.component.css']
 })
-export class ProfileComponent {
+export class DoctorComponent {
+
+
   userName: string = ''; // Initialize or fetch the username
   userRole: string = ''; // Initialize or fetch the user role
 
@@ -46,3 +49,4 @@ export class ProfileComponent {
     }
   }
 }
+

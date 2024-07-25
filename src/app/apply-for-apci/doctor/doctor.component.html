@@ -1,1 +1,68 @@
-<p>doctor works!</p>
+<div class="container">
+  <header class="header">
+    <img src="assets/cnam-logo.png" alt="CNAM Logo" class="cnam-logo">
+    <div class="title">Bienvenue au TacNam</div>
+    <img src="assets/tagamuta-valley-logo.png" alt="Tagamuta Valley Logo" class="tagamuta-logo">
+  </header>
+  
+  <div class="form-container">
+    <button class="header-button">DEMANDE D'ADMISSION EN APCI</button>
+    <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" class="form">
+      <div class="field-group">
+        <div class="field">
+          <label for="apciIdentifier">Identifiant de la demande APCI</label>
+          <input id="apciIdentifier" formControlName="apciIdentifier" type="text" readonly>
+        </div>
+
+        <div class="field">
+          <label for="doctorName">je soussigné, docteur :</label>
+          <input id="doctorName" formControlName="doctorName" type="text">
+        </div>
+        <div class="field">
+          <label for="doctorSpeciality">Exerçant en tant que :</label>
+          <input id="doctorSpeciality" formControlName="doctorSpeciality" type="text">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <div class="field">
+          <label for="location">à :</label>
+          <input id="location" formControlName="location" type="text">
+        </div>
+        <div class="field">
+          <label for="conventionCode">code conventionnel :</label>
+          <input id="conventionCode" formControlName="conventionCode" type="text">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="patientName">certifie après avoir examiné Mr (me) :</label>
+        <input id="patientName" formControlName="patientName" type="text">
+      </div>
+
+      <div class="field">
+        <label for="socialNumber">Numéro de l'associé social :</label>
+        <input id="socialNumber" formControlName="socialNumber" type="text">
+      </div>
+
+      <div class="section">
+        Que l’affection qu’il (elle) présente figure parmi les affections prises en charge intégralement (APCI) par la CNAM, et ce conformément à la liste des APCI fixée par l'arrêté conjoint des ministres chargés de la santé publique et de la sécurité sociale du 25/06/2007....
+      </div>
+
+      <div class="field-group">
+        <div class="field">
+          <label for="date">Date:</label>
+          <input id="date" formControlName="date" type="date">
+        </div>
+        <div class="field">
+          <label for="doctorSignature">Cachet et signature du médecin :</label>
+          <input id="doctorSignature" formControlName="doctorSignature" type="file" (change)="onFileChange($event)" accept="image/*">
+          
+          <img *ngIf="imageSrc" [src]="imageSrc" alt="Signature Preview" style="max-width: 200px; max-height: 200px; margin-top: 10px;">
+        </div>
+      </div>
+
+      <button type="submit">soumettre</button>
+    </form>
+  </div>
+</div>

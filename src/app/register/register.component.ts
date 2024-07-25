@@ -14,7 +14,19 @@ export class RegisterComponent {
   confirmPassword: string = '';
   role: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {} // Inject Router
+  constructor(private http: HttpClient, private router: Router) {}
+
+  deduceRole() {
+    if (this.email.includes('patient')) {
+      this.role = 'PATIENT';
+    } else if (this.email.includes('cnam')) {
+      this.role = 'CNAM_OFFICER';
+    } else if (this.email.includes('doctor')) {
+      this.role = 'DOCTOR';
+    } else {
+      this.role = ''; // Clear the role if no match found
+    }
+  }
 
   register() {
     if (this.password !== this.confirmPassword) {
@@ -37,8 +49,7 @@ export class RegisterComponent {
       .subscribe({
         next: response => {
           console.log('User registered successfully', response);
-          // Optionally redirect to login after successful registration
-          //this.router.navigate(['/login']); // Navigate to login route
+          this.router.navigate(['/login']);
         },
         error: error => {
           console.error('Registration failed', error);
@@ -52,7 +63,6 @@ export class RegisterComponent {
       });
   }
 
-  // Method to handle navigation to login
   navigateToLogin() {
     this.router.navigate(['/login']);
   }

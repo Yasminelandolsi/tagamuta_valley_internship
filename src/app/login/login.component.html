@@ -1,11 +1,11 @@
 <div class="container">
     <div class="header">
       <img src="assets/cnam-logo.png" alt="CNAM Logo" class="cnam-logo">
-      <div class="title">Welcome to TacNam</div>
+      <div class="title">Bienvenue au TacNam</div>
       <img src="assets/tagamuta-valley-logo.png" alt="Tagamuta Valley Logo" class="tagamuta-logo">
     </div>
     <div class="description">
-      <p>TacNam is a service developed by Tagmuta Valley to facilitate APCI Applications and management</p>
+      <p>TacNam est un service développé par Tagamuta Valley pour faciliter les demandes et la gestion de l'APCI.  </p>
     </div>
     <div class="form-container">
       <div class="sign-up-header">LOGIN</div>
@@ -19,11 +19,13 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="id">Unique ID:</label>
+          <label for="id">Unique Identifiant:</label>
           <input type="number" id="id" [(ngModel)]="id" name="id" required>
         </div>
         <div class="buttons">
-          <button type="submit" class="register-btn">Login</button>
+          <button type="submit" class="register-btn">Se connecter</button>
+          <p>Vous n'avez pas encore de compte ?</p>
+          <button type="button" (click)="navigateTosignup()" class="register-btn">Créer un compte</button>
        
         </div>
       </form>
