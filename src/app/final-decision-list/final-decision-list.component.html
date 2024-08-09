@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="flex-container">
+      <div class="flex-item" *ngFor="let decision of finalDecisions">
+        <h3>Final Decision #{{ decision.id }}</h3>
+        <p><strong>APCI Identifier:</strong> {{ decision.apciIdentifier }}</p>
+        <p><strong>Patient Unique Identifier:</strong> {{ decision.patientUniqueIdentifier }}</p>
+        <p><strong>Convention Code:</strong> {{ decision.patientConventionCode }}</p>
+        <p><strong>CNSS:</strong> {{ decision.patientCnss }}</p>
+        <p><strong>CNRPS:</strong> {{ decision.patientCnrps }}</p>
+        <p><strong>Convention Bilaterale:</strong> {{ decision.patientConventionBilaterale }}</p>
+        <p><strong>Insured Name:</strong> {{ decision.patientInsuredPrenom }} {{ decision.patientInsuredNom }}</p>
+        <p><strong>Insured Address:</strong> {{ decision.patientInsuredAdresse }}</p>
+        <p><strong>Insured NCin:</strong> {{ decision.patientInsuredNCin }}</p>
+        <p><strong>Insured Telephone:</strong> {{ decision.patientInsuredTelephone }}</p>
+        <p><strong>Beneficiary Type:</strong> {{ decision.patientBeneficiaryType }}</p>
+        <p><strong>Beneficiary Name:</strong> {{ decision.patientBeneficiaryPrenom }} {{ decision.patientBeneficiaryNom }}</p>
+        <p><strong>Beneficiary Date of Birth:</strong> {{ decision.patientBeneficiaryDateNaissance }}</p>
+        <p><strong>Decision Status:</strong> {{ decision.decisionStatus }}</p>
+        <p><strong>APCI Code:</strong> {{ decision.apciCode }}</p>
+        <p><strong>Coverage Duration:</strong> {{ decision.coverageDuration }}</p>
+        <p><strong>Refusal Motive:</strong> {{ decision.refusalMotive }}</p>
+        <p><strong>Observations:</strong> {{ decision.observations }}</p>
+        <p><strong>Coverage Start Date:</strong> {{ decision.coverageStartDate }}</p>
+        <p><strong>Sign-Off Date:</strong> {{ decision.signOffDate }}</p>
+      </div>
+    </div>
+  </div>
+  

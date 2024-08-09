@@ -25,24 +25,11 @@ export class PatientComponent {
   }
 
   checkApciStatus() {
-    // Logic to check APCI status
+    this.router.navigate(['/list']);
   }
 
   applyForApci() {
-    switch (this.userRole) {
-      case 'PATIENT':
-        this.router.navigate(['/apply-for-apci/patient']);
-        break;
-      case 'DOCTOR':
-        this.router.navigate(['/apply-for-apci/doctor']);
-        break;
-      case 'CNAM_OFFICER':
-        this.router.navigate(['/apply-for-apci/cnam-officer']);
-        break;
-      default:
-        // Handle unexpected role
-        this.router.navigate(['/']);
-        break;
-    }
+    this.router.navigate(['/item']);
+
   }
 }

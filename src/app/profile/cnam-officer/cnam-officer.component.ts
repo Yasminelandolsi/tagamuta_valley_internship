@@ -28,7 +28,7 @@ export class CnamOfficerComponent {
 
   voirApci() {
     
-      this.router.navigate(['/cnamdecision']);
+      this.router.navigate(['/apciinfo']);
     
     
     }

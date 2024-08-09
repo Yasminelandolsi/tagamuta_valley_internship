@@ -8,11 +8,15 @@
     <div class="form-container">
       <form (ngSubmit)="onSubmit()" class="form">
         <div class="field-group">
-          <label for="cnamDecision">Décision CNAM</label>
-          <select id="cnamDecision" [(ngModel)]="cnamDecision" name="cnamDecision" required>
-            <option value="accepter">Accepter</option>
-            <option value="refuser">Refuser</option>
+          <label for="decisionStatus">Décision CNAM</label>
+          <select id="decisionStatus" [(ngModel)]="decisionStatus" name="decisionStatus" required>
+            <option value="accepter">accepter</option>
+            <option value="refuser">refuser</option>
           </select>
+        </div>
+        <div class="field-group">
+          <label for="apciIdentifier">Identifiant de la demande APCI</label>
+          <input id="apciIdentifier" type="text" [(ngModel)]="apciIdentifier" name="apciIdentifier" readonly>
         </div>
   
         <div class="field-group">

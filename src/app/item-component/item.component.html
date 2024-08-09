@@ -1,0 +1,17 @@
+<div class="item-container">
+  <div class="flex-container">
+    <div class="flex-item" *ngFor="let item of items">
+      <p><strong>APCI Identifier:</strong> {{ item.apciIdentifier }}</p>
+      <p><strong>Convention Code:</strong> {{ item.conventionCode }}</p>
+      <p><strong>Date:</strong> {{ item.date }}</p>
+      <p><strong>Doctor Name:</strong> {{ item.doctorName }}</p>
+      <p><strong>Doctor Signature:</strong> {{ item.doctorSignature }}</p>
+      <p><strong>Doctor Speciality:</strong> {{ item.doctorSpeciality }}</p>
+      <p><strong>Location:</strong> {{ item.location }}</p>
+      <p><strong>Patient Name:</strong> {{ item.patientName }}</p>
+      <p><strong>Social Number:</strong> {{ item.socialNumber }}</p>
+      <!-- Bouton "Terminer le processus APCI" -->
+      <button (click)="setApciIdentifier(item); completeItem()">Terminer le processus APCI</button>
+    </div>
+  </div>
+</div>

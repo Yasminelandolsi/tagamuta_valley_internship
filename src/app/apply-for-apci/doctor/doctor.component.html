@@ -4,7 +4,7 @@
     <div class="title">Bienvenue au TacNam</div>
     <img src="assets/tagamuta-valley-logo.png" alt="Tagamuta Valley Logo" class="tagamuta-logo">
   </header>
-  
+
   <div class="form-container">
     <button class="header-button">DEMANDE D'ADMISSION EN APCI</button>
     <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" class="form">
@@ -64,5 +64,10 @@
 
       <button type="submit">soumettre</button>
     </form>
+    
+    <!-- Message de succès -->
+    <div *ngIf="isSubmitted" class="alert alert-success" role="alert" style="margin-top: 20px;">
+      Formulaire soumis avec succès !
+    </div>
   </div>
 </div>

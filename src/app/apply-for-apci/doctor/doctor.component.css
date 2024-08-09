@@ -140,5 +140,11 @@
     .section h2 {
       font-size: 1.125rem;
     }
+
+    .alert {
+      margin-top: 20px;
+    }
+    
+
   }
   

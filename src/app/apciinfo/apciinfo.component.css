@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+  flex-direction: row; /* Default direction is row */
+  gap: 10px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  padding: 10px; /* Add padding around the container */
+  }
+  
+  .apciform-card {
+    border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  flex: 1 1 200px; /* Flex items grow and shrink with a minimum width of 200px */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+  
+  
+  .apciform-card h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  
+  .apciform-card p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    background-color: #004085;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .apciform-card {
+      width: 100%; /* Full width on smaller screens */
+      max-width: none; /* Remove max-width constraint */
+    }
+  
+    .apciform-card h2 {
+      font-size: 16px; /* Slightly smaller font size */
+    }
+  
+    .apciform-card p {
+      font-size: 12px; /* Slightly smaller font size */
+    }
+  
+    button {
+      padding: 6px 12px; /* Adjust button padding */
+      font-size: 14px; /* Slightly smaller font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 5px;
+    }
+  
+    .apciform-card h2 {
+      font-size: 14px; /* Smaller font size */
+    }
+  
+    .apciform-card p {
+      font-size: 10px; /* Smaller font size */
+    }
+  
+    button {
+      padding: 5px 10px; /* Smaller button padding */
+      font-size: 12px; /* Smaller font size */
+    }
+  }
+  

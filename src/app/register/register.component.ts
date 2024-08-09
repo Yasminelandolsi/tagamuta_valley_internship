@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router'; // Import Router
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,23 +8,24 @@ import { Router } from '@angular/router'; // Import Router
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  name: string = '';
+  firstname: string = ''; // Updated to match Spring Boot entity
+  lastname: string = '';  // Updated to match Spring Boot entity
   email: string = '';
   password: string = '';
   confirmPassword: string = '';
-  role: string = '';
+  fonction: string = ''; // Updated to match Spring Boot entity
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  deduceRole() {
+  deduceFonction() {
     if (this.email.includes('patient')) {
-      this.role = 'PATIENT';
+      this.fonction = 'PATIENT';
     } else if (this.email.includes('cnam')) {
-      this.role = 'CNAM_OFFICER';
+      this.fonction = 'CNAM_OFFICER';
     } else if (this.email.includes('doctor')) {
-      this.role = 'DOCTOR';
+      this.fonction = 'DOCTOR';
     } else {
-      this.role = ''; // Clear the role if no match found
+      this.fonction = ''; // Clear the fonction if no match found
     }
   }
 
@@ -35,17 +36,18 @@ export class RegisterComponent {
     }
 
     const user = {
-      name: this.name,
+      firstname: this.firstname,
+      lastname: this.lastname,
       email: this.email,
       password: this.password,
-      role: this.role
+      fonction: this.fonction
     };
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
 
-    this.http.post('http://localhost:8080/api/auth/register', user, { headers })
+    this.http.post('http://localhost:8080/api/v1/auth/signup', user, { headers })
       .subscribe({
         next: response => {
           console.log('User registered successfully', response);

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="apciform-card" *ngFor="let apciform of apciforms">
+        <h2>APCI Identifier: {{ apciform.apciIdentifier }}</h2>
+      <p><strong>Patient Unique Identifier:</strong> {{ apciform.patientUniqueIdentifier }}</p>
+      <p><strong>Patient Convention Code:</strong> {{ apciform.patientConventionCode }}</p>
+      <p><strong>Patient CNSS:</strong> {{ apciform.patientCnss }}</p>
+      <p><strong>Patient CNRPS:</strong> {{ apciform.patientCnrps }}</p>
+      <p><strong>Patient Convention Bilaterale:</strong> {{ apciform.patientConventionBilaterale }}</p>
+      <p><strong>Patient Insured Prenom:</strong> {{ apciform.patientInsuredPrenom }}</p>
+      <p><strong>Patient Insured Nom:</strong> {{ apciform.patientInsuredNom }}</p>
+      <p><strong>Patient Insured Adresse:</strong> {{ apciform.patientInsuredAdresse }}</p>
+      <p><strong>Patient Insured NCin:</strong> {{ apciform.patientInsuredNCin }}</p>
+      <p><strong>Patient Insured Telephone:</strong> {{ apciform.patientInsuredTelephone }}</p>
+      <p><strong>Patient Beneficiary Type:</strong> {{ apciform.patientBeneficiaryType }}</p>
+      <p><strong>Patient Beneficiary Prenom:</strong> {{ apciform.patientBeneficiaryPrenom }}</p>
+      <p><strong>Patient Beneficiary Nom:</strong> {{ apciform.patientBeneficiaryNom }}</p>
+      <p><strong>Patient Beneficiary Date Naissance:</strong> {{ apciform.patientBeneficiaryDateNaissance }}</p>
+      <p><strong>Doctor Name:</strong> {{ apciform.doctorName }}</p>
+      <p><strong>Doctor Speciality:</strong> {{ apciform.doctorSpeciality }}</p>
+      <p><strong>Location:</strong> {{ apciform.location }}</p>
+      <p><strong>Doctor Convention Code:</strong> {{ apciform.doctorConventionCode }}</p>
+      <p><strong>Patient Name:</strong> {{ apciform.patientName }}</p>
+      <p><strong>Social Number:</strong> {{ apciform.socialNumber }}</p>
+      <p><strong>Date:</strong> {{ apciform.date }}</p>
+      <p><strong>Doctor Signature:</strong> {{ apciform.doctorSignature }}</p>
+      <button (click)="completeItem() ; setApciIdentifier(apciform) ">Prendre la decision concernant la demande</button>
+
+    </div>
+  </div>
+  
